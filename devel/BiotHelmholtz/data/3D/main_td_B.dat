@@ -1,0 +1,41 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+#MESH_FILE        = data/3D/fem_b_2d_45.msh
+#MESH_FILE        = data/3D/xfem_2d.msh
+#MESH_FILE        = data/3D/xfem_2d_fine.msh
+MESH_FILE        = data/3D/fem_b_tube_cyl_2d_sand_r1.msh
+#MESH_FILE        = data/3D/fem_multilayer_1.msh
+#MESH_FILE        = data/3D/fem_multilayer_oblique_45.msh
+
+###################################################
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+ZONE_NAME material_neg  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/polyurethane.mat}
+ZONE_NAME material_pos  = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_liquid MAT_PARAM = data/material/water_fluid.mat}
+#ZONE 103  = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE 104  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/Material/porous_fluid_film_nonwoven.mat}
+#ZONE 105  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/polyurethane.mat}
+
+ZONE 110 = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+ZONE 111 = {MAT_CLASS = acoustic_limp MAT_PARAM = data/Material/porous_limp_film_woven.mat}
+ZONE 112 = {MAT_CLASS = acoustic_limp MAT_PARAM = data/Material/porous_limp_film_nonwoven.mat}
+ZONE 113 = {MAT_CLASS = acoustic_limp MAT_PARAM = data/Material/porous_limp_film_woven.mat}
+ZONE 114 = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/polyurethane.mat}
+
+#ZONE 110 = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE 111 = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/porous_biot_film_woven.mat}
+#ZONE 112 = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/porous_biot_film_nonwoven.mat}
+#ZONE 113 = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/porous_biot_film_woven.mat}
+#ZONE 114 = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/polyurethane.mat}
+####################################################
+####################################################
+
+
+BC_LINE   101 ={  NORMAL_VELOCITY      FIX =   1. }
+#BC_LINE   102 ={  NORMAL_VELOCITY      FIX =   0. }
+BC_LINE   102 ={  DISPLACEMENT_X      FIX =   0. }
+BC_LINE   102 ={  DISPLACEMENT_Y      FIX =   0. }
+
+#BC_POINT 8 = {  PRESSURE      FIX =   1. }

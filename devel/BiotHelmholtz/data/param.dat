@@ -1,0 +1,27 @@
+#parser code
+order_approx_min = 4
+debug = 0
+XFEM = 0
+Discontinuity = 0
+Coupling_type = AB
+levelG = 3
+
+
+#parser Helmholtz
+Frequency_Hz = 1195
+H_wave_angle = 0.
+Cylinder_radius = 0.12
+Resistivity = 775e3
+Mat_Thickness = 0.8e-3
+
+#parser Nitsche
+Nitsche_fluid = 0.
+Nitsche_solid = 1
+Average_gamma = 0.5
+Element_size = 1
+
+#Generic interface parameters
+Porosity = 0.04
+Tortuosity = 1.15
+Thermal_length = 230e-6
+Viscous_length = 230e-6

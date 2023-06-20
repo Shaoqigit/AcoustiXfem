@@ -1,0 +1,40 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+#MESH_FILE        = data/car_xfem.msh
+#MESH_FILE        = data/car_xfem3.msh
+#MESH_FILE        = data/car_fem_mseat.msh
+#MESH_FILE        = data/car_fem_mseat_nonfilm.msh
+#MESH_FILE        = data/car_fem_noseat.msh
+#MESH_FILE        = data/car_xfem_mseat.msh
+
+###################################################
+ZONE 44  = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE 46  = {MAT_CLASS = acoustic_limp MAT_PARAM = data/Material/porous_limp_film_nonwoven.mat}
+#ZONE 45  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/XFM.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_liquid MAT_PARAM = data/water_fluid.mat}
+#ZONE 122  = {MAT_CLASS = acoustic_air MAT_PARAM = data/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/porous_fluid.mat}
+
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/XFM.mat}
+
+####################################################
+####################################################
+
+
+
+
+#BC_LINE  1 ={  PRESSURE      FIX =   1. }
+#BC_LINE  2 ={  PRESSURE      FIX =   1. }
+#BC_LINE  3 ={  PRESSURE      FIX =   1. }
+#BC_LINE  4 ={  PRESSURE      FIX =   1. }
+
+#BC_LINE  2 ={  NORMAL_VELOCITY      FIX =   0. } 
+#BC_LINE  2 ={  ELASTIC_SUPPORT      FIX =   -0.5 } 
+BC_LINE  3 ={  NORMAL_VELOCITY      FIX =   1. }
+#BC_LINE  4 ={  ELASTIC_SUPPORT      FIX =   0.7071067812 }
+
+
+

@@ -1,0 +1,24 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+#MESH_FILE        = data/3D/xfem_2d.msh
+MESH_FILE        = data/3D/fem_2d_1.msh
+#MESH_FILE        = data/FEM/fem_m1.msh
+
+
+###################################################
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/material/porous_fluid_GODG_2015_1.mat}
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_liquid MAT_PARAM = data/material/water_fluid.mat}
+ZONE 103  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+ZONE 104  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/material/porous_fluid_film.mat}
+ZONE 105  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/material/porous_fluid_GODG_2015_1.mat}
+####################################################
+####################################################
+
+
+BC_LINE  101 ={  NORMAL_VELOCITY      FIX =   1. }
+BC_LINE  103 ={  NORMAL_VELOCITY      FIX =   0. }
+#BC_LINE  102 ={  NORMAL_VELOCITY      FIX =   0. }

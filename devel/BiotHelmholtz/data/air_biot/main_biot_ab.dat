@@ -1,0 +1,70 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+#MESH_FILE        = data/air_biot/coup_struct_4.msh
+#MESH_FILE        = data/air_biot/square_ustr_2.msh
+MESH_FILE        = data/air_biot/square_ustr_m3.msh
+#MESH_FILE        = data/biot_biot/bb_xfem_01.msh
+#MESH_FILE        = data/cylinder/squares_1.msh
+#MESH_FILE        = data/cylinder/cylinderm_3.msh
+
+
+###################################################
+#ZONE 122  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/foam_biot_2.mat}
+#ZONE 122  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/air_fluid.mat}
+#ZONE 121  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/foam_biot_1.mat}
+ZONE_NAME material_neg = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/Biot_C_JASA2007.mat}
+ZONE_NAME material_pos = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE_NAME material_neg = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/foam_biot_2_GO_2015.mat}
+#ZONE_NAME material_pos = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/polyurethane.mat}
+####################################################
+####################################################
+
+#Biot-Biot
+BC_LINE  1 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+BC_LINE  2 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+BC_LINE  3 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+BC_LINE  4 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+BC_LINE  5 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+BC_LINE  6 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+BC_LINE  7 = { ELECTRIC_DISPLACEMENT  FIX = 1. }
+
+#BC_LINE  1 = { PRESSURE  FIX = 0. }
+#BC_LINE  2 = { PRESSURE  FIX = 0. }
+#BC_LINE  3 = { PRESSURE  FIX = 0. }
+#BC_LINE  4 = { PRESSURE  FIX = 0. }
+
+BC_LINE  1 = { STRESS  FIX = 1. }
+BC_LINE  2 = { STRESS  FIX = 1. }
+BC_LINE  3 = { STRESS  FIX = 1. }
+BC_LINE  4 = { STRESS  FIX = 1. }
+BC_LINE  5 = { STRESS  FIX = 1. }
+BC_LINE  6 = { STRESS  FIX = 1. }
+BC_LINE  7 = { STRESS  FIX = 1. }
+
+
+BC_LINE 1 = {VELOCITY_X FIX = 1.}
+BC_LINE 2 = {VELOCITY_X FIX = 1.}
+BC_LINE 3 = {VELOCITY_X FIX = 1.}
+BC_LINE 4 = {VELOCITY_X FIX = 1.}
+BC_LINE 5 = {VELOCITY_X FIX = 1.}
+BC_LINE 6 = {VELOCITY_X FIX = 1.}
+BC_LINE 7 = {VELOCITY_X FIX = 1.}
+
+
+
+#BC_LINE  2 ={  DISPLACEMENT_X      FIX =   0. DISPLACEMENT_Y   FIX = 0.}
+#BC_LINE  2 ={  DISPLACEMENT   FIX = 0.}
+
+#BC_LINE  2 ={  NORMAL_VELOCITY   FIX = 0.}
+#BC_LINE  2 ={  TRACTION_X   FIX = 0.}
+
+#BC_LINE 4 ={  DISPLACEMENT   FIX =     -1.}
+#BC_LINE 4 ={  TRACTION_X   FIX =     1.}
+#BC_LINE 4 ={  DISPLACEMENT_X   FIX =     -1.}
+
+#BC_LINE 4 ={  NORMAL_VELOCITY   FIX =     1.}
+
+
+

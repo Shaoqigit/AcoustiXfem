@@ -1,0 +1,3 @@
+# lines starting by a # are comment lines
+MESH_FILE_TYPE   = msh
+MESH_FILE        = data/cube.msh

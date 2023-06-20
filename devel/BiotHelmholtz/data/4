@@ -1,0 +1,20 @@
+#parser code
+order_approx_min = 4
+debug = 0
+XFEM = 1
+Discontinuity = 0
+Coupling_type = AB
+
+#parser Helmholtz
+H_angular_frequency = 12560
+H_wave_angle = 0.
+Cylinder_radius = 0.1
+Resistivity = 775e3
+Mat_Thickness = 0.5e-3
+
+
+#parser Nitsche
+Nitsche_fluid = 1e8
+Nitsche_solid = 1
+Element_size = 1
+

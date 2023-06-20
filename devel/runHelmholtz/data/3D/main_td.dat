@@ -1,0 +1,27 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+#MESH_FILE        = data/3D/xfem.msh
+MESH_FILE        = data/3D/fem.msh
+#MESH_FILE        = data/square_mesh/square_ustr_m4.msh
+
+
+###################################################
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/material/porous_fluid_GODG_2015_1.mat}
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_liquid MAT_PARAM = data/material/water_fluid.mat}
+ZONE 1  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+ZONE 2  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/material/porous_fluid_film.mat}
+ZONE 3  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/material/porous_fluid_GODG_2015_1.mat}
+####################################################
+####################################################
+
+
+BC_SURFACE  101 ={  NORMAL_VELOCITY      FIX =   1. }
+BC_SURFACE  102 ={  NORMAL_VELOCITY      FIX =   0. }
+BC_SURFACE  103 ={  NORMAL_VELOCITY      FIX =   0. }
+BC_SURFACE  104 ={  NORMAL_VELOCITY      FIX =   0. }
+BC_SURFACE  105 ={  NORMAL_VELOCITY      FIX =   0. }
+BC_SURFACE  106 ={  NORMAL_VELOCITY      FIX =   0. }

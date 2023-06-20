@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/xExport/src",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/xFEM/src",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/xMeshTool/xDistMesh/src",
+                "/usr/lib/x86_64-linux-gnu/openmpi/include",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/Trellis/AOMD/AOMD/include",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/xTensor/src",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/xTool/src",
+                "/home/shaoqi/runeXlibris/develop/shaoqi/Xfiles/xInterface/AOMD/general/src"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

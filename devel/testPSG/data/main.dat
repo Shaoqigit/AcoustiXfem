@@ -1,0 +1,50 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+
+#MESH_FILE        = IN PARAM FILE !
+
+
+##################################################
+ZONE 1  = {MAT_CLASS = elastic MAT_PARAM = data/matrix.mat}
+ZONE_NAME matrix  = {MAT_CLASS = elastic MAT_PARAM = data/matrix.mat}
+####################################################
+####################################################
+
+
+##2D case
+#BC_LINE  2 ={  TRACTION_X      FIX =   0.5 }
+
+#BC_LINE 4 ={  DISPLACEMENT_X             FIX = 0.0 }              
+
+#BC_LINE  3 ={  TRACTION_Y      FIX =  1.0 }
+#BC_LINE  1 ={  TRACTION_Y      FIX =  -1.0 }
+
+#BC_LINE 1 ={  DISPLACEMENT_X             FIX = 0.0 
+#                 DISPLACEMENT_Y             FIX = 0.0 }              
+
+#BC_LINE_NAME  1 ={  TRACTION_Y      FIX =  -1.0 }
+
+#BC_LINE_NAME  1 ={  DISPLACEMENT_X      FIX =  0.5 
+#                    DISPLACEMENT_Y      FIX =  -0.5 }
+
+#BC_LINE_NAME  1 ={  DISPLACEMENT_X      FIX =  0. }
+#BC_LINE_NAME  1 ={  DISPLACEMENT_Y      FIX =  -0.5 }
+
+
+
+BC_POINT 1 ={  DISPLACEMENT_X             FIX = 0.0 
+               DISPLACEMENT_Y             FIX = 0.0 }              
+
+BC_POINT 2 ={  DISPLACEMENT_Y             FIX = 0.0 }
+
+BC_LINE  1 ={  STRESS      FIX =  1.0 }
+BC_LINE  2 ={  STRESS      FIX =  1.0 }
+BC_LINE  3 ={  STRESS      FIX =  1.0 }
+BC_LINE  4 ={  STRESS      FIX =  1.0 }
+
+
+
+
+

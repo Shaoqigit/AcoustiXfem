@@ -1,0 +1,3 @@
+NAME          = concrete
+YOUNG_MODULUS = 1.
+POISSON_RATIO = 0.3

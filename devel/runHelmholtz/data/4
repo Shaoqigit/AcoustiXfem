@@ -1,0 +1,14 @@
+#Numerical options
+order_approx_min = 4
+debug = 0
+XFEM = 0
+Discontinuity = 0
+
+#Helmholtz parameters
+H_angular_frequency = 12560
+H_wave_angle = 0
+Cylinder_radius = 0.2 
+Resistivity = 775e3
+Mat_Thickness = 0.45e-3
+Nitsche_fluid = 1e8
+Element_size = 0.

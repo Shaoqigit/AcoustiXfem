@@ -1,0 +1,18 @@
+order_approx_min = 4
+order_approx_max = 4
+
+#recursplit_level = 3
+levelC = 3
+levelG = 9
+
+classifyIn_string = matrix
+classifyOut_string = out
+
+
+doErrorComputation = 1
+computeStrainEnergy = 0
+doPostPro = 0
+
+
+# Maillage :
+pymesh_filename = data/square.msh

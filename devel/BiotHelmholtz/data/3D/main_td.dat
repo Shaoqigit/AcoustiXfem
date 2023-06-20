@@ -1,0 +1,23 @@
+# lines starting by a # are comment lines
+##########
+# COMPUTER INFORMATION
+MESH_FILE_TYPE   = msh
+MESH_FILE        = data/3D/xfem.msh
+#MESH_FILE        = data/square_mesh/square_ustr_m4.msh
+
+
+###################################################
+#ZONE_NAME material_neg  = {MAT_CLASS = acoustic_air MAT_PARAM = data/material/air_fluid.mat}
+ZONE_NAME material_neg  = {MAT_CLASS = acoustic_biot MAT_PARAM = data/Material/foam_biot_1_G0_2015.mat}
+ZONE_NAME material_pos  = {MAT_CLASS = acoustic_air MAT_PARAM = data/Material/air_fluid.mat}
+#ZONE_NAME material_pos  = {MAT_CLASS = acoustic_liquid MAT_PARAM = data/material/water_fluid.mat}
+#ZONE 121  = {MAT_CLASS = acoustic_air MAT_PARAM = data/air_fluid.mat}
+#ZONE 122  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/porous_fluid_2.mat}
+#ZONE 123  = {MAT_CLASS = acoustic_fluid_porous MAT_PARAM = data/porous_fluid_1.mat}
+####################################################
+####################################################
+
+
+BC_SURFACE  101 ={  NORMAL_VELOCITY      FIX =   1. }
+BC_SURFACE  102 ={  NORMAL_VELOCITY      FIX =   0. }
+
