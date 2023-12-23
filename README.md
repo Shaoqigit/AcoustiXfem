@@ -1,6 +1,6 @@
 ### Welcome to AcoustiXfem
 
-This is the source code of an eXtended Finite Element Method application for acoustic based on an in-house open-source FEM library.
+This is the source code of an eXtended Finite Element Method application for acoustic based on an in-house open-source X-FEM library.
 .
 ## Highlight
 * Disspative porous materials are considered by Equivalent fluid model and Biot coupling equations [1]
